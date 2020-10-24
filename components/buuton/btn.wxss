@@ -1,0 +1,19 @@
+.row{
+  padding: 20rpx;
+}
+.row .info .top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rpx;
+}
+.row .btn{
+  width:60%;
+  margin:auto;
+  margin-bottom: 10rpx;
+}
+.row .left{
+  text-align: left;
+}
+.row .right{
+  text-align: right;
+}

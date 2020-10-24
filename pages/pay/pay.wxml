@@ -1,0 +1,4 @@
+<btn address="{{address}}"></btn>
+<shop cart="{{cart}}" totalPrice="{{totalPrice}}"
+totalNum="{{totalNum}}" show="{{show}}" address="{{address}}">
+</shop>

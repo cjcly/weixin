@@ -1,0 +1,59 @@
+<view class="shop">
+	<view class="title">购物车</view>
+	<view class="main">
+		<block wx:if="{{cart.length!==0}}">
+			<view class="item" wx:for="{{cart}}" wx:key="goods_id">
+				<!-- 复选框 -->
+				<view class="chk" wx:if="{{show}}">
+					<checkbox-group data-id="{{item.goods_id}}" bindchange="handeChange">
+						<checkbox checked="{{item.checked}}"></checkbox>
+					</checkbox-group>
+				</view>
+				<!-- 图片 -->
+				<navigator class="img">
+					<image mode="widthFix" src="{{item.goods_small_logo}}">
+					</image>
+				</navigator>
+				<!-- 描述信息 -->
+				<view class="info">
+					<view class="name">
+						{{item.goods_name}}
+					</view>
+					<view class="right">
+						<view class="price">￥{{item.goods_price}}</view>
+						<view class="cart_num">
+							<block wx:if="{{show}}">
+								<text data-id="{{item.goods_id}}" bindtap="handleNum" data-opretion="{{-1}}">-</text>
+								<text class="goods_num">{{item.num}}</text>
+								<text  data-id="{{item.goods_id}}" bindtap="handleNum"
+                data-opretion="{{1}}">+</text>
+							</block>
+							<block wx:else>x{{item.num}}</block>
+						</view>
+					</view>
+				</view>
+			</view>
+		</block>
+		<block wx:else>
+			<image mode="widthFix" src="http://hbimg.b0.upaiyun.com/e1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658"></image>
+		</block>
+	</view>
+	<!-- 底部工具栏 -->
+	<view class="footer">
+		<!-- 全选 -->
+		<view class="chk">
+			<view wx:if="{{show}}">
+				<checkbox-group bindchange="handleAllCheck">
+					<checkbox checked="{{allChecked}}">全选</checkbox>
+				</checkbox-group>
+			</view>
+		</view>
+		<!-- 总计 -->
+		<view class="price_wrap">
+			<view class="all_price">合计：<text>￥{{totalPrice}}</text></view>
+			<view>包含运费</view>
+		</view>
+		<!-- 结算 -->
+		<view class="pay" bindtap="{{show?'handlePay':'handleAuth'}}">{{show?"结算":"支付"}}（{{totalNum}}）</view>
+	</view>
+</view>

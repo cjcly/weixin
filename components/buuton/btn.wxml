@@ -1,0 +1,13 @@
+<view class="row">
+  <view class="btn" wx:if="{{!address.userName}}">
+    <button bindtap="handleAddress" type="primary" plain>+ 获取收货地址</button>
+  </view>
+  <view class="info" wx:else>
+    <view class="top">
+      <text class="left">收货人：{{address.userName}}</text>
+      <text class="right">电话：{{address.telNumber}}</text>
+    </view>
+    <view class="bottom">地址：{{address.all}}</view>
+  </view>
+</view>
+

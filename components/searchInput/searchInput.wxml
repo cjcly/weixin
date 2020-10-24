@@ -1,0 +1,10 @@
+<van-sticky offset-top="{{ -1 }}">
+  <van-search
+  value="{{ value }}"
+  shape="round"
+  background="#eb4450"
+  placeholder="请输入搜索关键词"
+  bind:search="toSearch"
+  class="van-hairline--top"
+/>
+</van-sticky>

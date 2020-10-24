@@ -1,0 +1,60 @@
+<searchInput></searchInput>
+<tabs tab="{{tabs}}" bindhandleItem="handleItem">
+	<block wx:if="{{tabs[0].isActive}}">
+		<view class="one-tab">
+			<navigator class="item" wx:for="{{goodsList}}" wx:key="goods_id"
+      url="/pages/goodsDetail/goodsDetail?goods_id={{item.goods_id}}"
+      >
+				<!-- 左侧图片 -->
+				<view class="img">
+        <!-- 如果item.goods_small_logo没有图片地址则使用默认图片地址 -->
+					<image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}"></image>
+				</view>
+				<!-- 右侧描述 -->
+          <view class="goodInfo">
+            <view class="name">{{item.goods_name}}</view>
+            <view class="num">{{item.goods_number}}</view>
+            <view class="price">￥{{item.goods_price}}</view>
+          </view>
+			</navigator>
+		</view>
+	</block>
+	<block wx:elif="{{tabs[1].isActive}}">
+    <view class="one-tab">
+			<navigator class="item" wx:for="{{goods1}}" wx:key="goods_id"
+      url="/pages/goodsDetail/goodsDetail?goods_id={{item.goods_id}}"
+      >
+				<!-- 左侧图片 -->
+				<view class="img">
+        <!-- 如果item.goods_small_logo没有图片地址则使用默认图片地址 -->
+					<image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}"></image>
+				</view>
+				<!-- 右侧描述 -->
+          <view class="goodInfo">
+            <view class="name">{{item.goods_name}}</view>
+            <view class="num">{{item.goods_number}}</view>
+            <view class="price">￥{{item.goods_price}}</view>
+          </view>
+			</navigator>
+		</view>
+  </block>
+	<block wx:elif="{{tabs[2].isActive}}">
+    <view class="one-tab">
+			<navigator class="item" wx:for="{{goods2}}" wx:key="goods_id"
+      url="/pages/goodsDetail/goodsDetail?goods_id={{item.goods_id}}"
+      >
+				<!-- 左侧图片 -->
+				<view class="img">
+        <!-- 如果item.goods_small_logo没有图片地址则使用默认图片地址 -->
+					<image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}"></image>
+				</view>
+				<!-- 右侧描述 -->
+          <view class="goodInfo">
+            <view class="name">{{item.goods_name}}</view>
+            <view class="num">{{item.goods_number}}</view>
+            <view class="price">￥{{item.goods_price}}</view>
+          </view>
+			</navigator>
+		</view>
+  </block>
+</tabs>

@@ -1,0 +1,110 @@
+page{
+  background-color: #edece8;
+}
+.header{
+  height: 45vh;
+  overflow: hidden;
+  background-color: var(--themeColor);
+  position: relative;
+}
+.header .img{
+  position: relative;
+}
+.header .img .bg{
+  height: 50vh;
+  /* 滤镜效果，也就是模糊 */
+  filter: blur(10rpx);
+}
+.header .img .info{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+}
+.header .img .info .icon{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.header .img .info .text{
+  color: #fff;
+  margin-top: 40rpx;
+}
+.header .login{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
+  border: 1rpx solid greenyellow;
+  color: greenyellow;
+  font-size: 38rpx;
+  padding: 30rpx;
+  border-radius: 10rpx;
+}
+.content{
+  position: relative;
+}
+.content .main{
+  padding-bottom: 100rpx;
+  color: #666;
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40rpx;
+}
+.content .main .history{
+  background-color: #fff;
+  display: flex;
+}
+.content .main .history navigator{
+  flex: 1;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.content .main .history navigator .his_num{
+  color: var(--themeColor);
+}
+.content .main .address{
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+.content .main .address .orders_title {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.content .main .address .order_content {
+  display: flex;
+}
+.content .main .address .order_content navigator {
+  padding: 15rpx 0;
+  flex: 1;
+  text-align: center;
+}
+.content .main .address .order_content navigator .iconfont {
+  color: var(--themeColor);
+  font-size: 40rpx;
+}
+.content .main .address_wrap {
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx ;
+}
+.content .main .app_info_wrap {
+  margin-top: 30rpx;
+  background-color: #fff;
+}
+.content .main .app_info_wrap .app_info_item {
+  padding: 20rpx ;
+  border-bottom: 1rpx solid #ccc;
+}
+.content .main .app_info_wrap .app_info_contact {
+  display: flex;
+  justify-content: space-between;
+}
+.content .main .recommend_wrap {
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx ;
+}

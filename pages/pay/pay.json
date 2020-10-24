@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "btn":"../../components/buuton/btn",
+    "shop":"../../components/shop/shop"
+  },
+  "navigationBarTitleText": "支付"
+}

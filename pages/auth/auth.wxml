@@ -1,0 +1,3 @@
+<button open-type="getUserInfo" type="primary"
+bindgetuserinfo="getUserInfo">点击授权</button>
+<view>除了公司账号外，个人账号不要进行此页面操作</view>

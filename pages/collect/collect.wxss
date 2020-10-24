@@ -1,0 +1,29 @@
+.one-tab .item{
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.one-tab .item .img{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.one-tab .item .img image {
+  width: 70%;
+}
+.one-tab .item .goodInfo{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.one-tab .item .goodInfo .name {
+  /* 文字超过2行显示省略号，隐藏 */
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.one-tab .item .goodInfo .price{
+  color: var(--themeColor);
+}
